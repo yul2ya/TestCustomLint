@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+
+dependencies {
+    compileOnly "com.android.tools.lint:lint-api:$lint_version"
+    compileOnly "com.android.tools.lint:lint-checks:$lint_version"
+    testImplementation "junit:junit:4.12"
+    testImplementation "com.android.tools.lint:lint:$lint_version"
+    testImplementation "com.android.tools.lint:lint-tests:$lint_version"
+    testImplementation "com.android.tools:testutils:$lint_version"
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+
+jar {
+    manifest {
+        attributes("Lint-Registry-v2":"com.yul2ya.checks.CustomIssueRegistry")
+    }
+}

@@ -1,0 +1,3 @@
+rootProject.name='TestCustomLint'
+include ':app'
+include ':checks'
