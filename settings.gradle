@@ -1,3 +1,2 @@
 rootProject.name='TestCustomLint'
-include ':app'
-include ':checks'
+include ':app', ':checks'
